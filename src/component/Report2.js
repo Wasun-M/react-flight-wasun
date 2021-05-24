@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Report2 = function () {
-    const server = "http://localhost:3001";
+    const server = "https://heroku-wasun-flights.herokuapp.com";
     const [flights, setflights] = useState([]);
 
     useEffect(function () {

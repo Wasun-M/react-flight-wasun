@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Flights = function () {
-    const server = "http://localhost:3001";
+    const server = "https://heroku-wasun-flights.herokuapp.com";
     const [search, setsearch] = useState({
         flight_type: '',
         fromdate: '',
