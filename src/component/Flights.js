@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
 const Flights = function () {
-    const server = "https://heroku-wasun-flights.herokuapp.com";
+    const server = window.$servername;
     const [search, setsearch] = useState({
         flight_type: '',
         fromdate: '',
@@ -122,18 +122,20 @@ const Flights = function () {
                     <div className="col-4"></div>
                 </div>
             </div>
-            <table className="table" >
+            <table className="table table-bordered" >
                 <thead>
-                    <th>FlightType</th>
-                    <th>ScheduleDate</th>
-                    <th>Carrier</th>
-                    <th>FlightNo</th>
-                    <th>AircraftType</th>
-                    <th>Reg</th>
-                    <th>Gate</th>
-                    <th>Pos</th>
-                    <th>Belt</th>
-                    <th>Remark</th>
+                    <tr>
+                        <th>FlightType</th>
+                        <th>ScheduleDate</th>
+                        <th>Carrier</th>
+                        <th>FlightNo</th>
+                        <th>AircraftType</th>
+                        <th>Reg</th>
+                        <th>Gate</th>
+                        <th>Pos</th>
+                        <th>Belt</th>
+                        <th>Remark</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {flights.map((e) => {

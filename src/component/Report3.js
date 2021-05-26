@@ -1,9 +1,10 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import Allfunction from "../functions/function"
 
 const Report3 = function () {
-    const server = "https://heroku-wasun-flights.herokuapp.com";
+    const server = window.$servername;
     const [flights, setflights] = useState([]);
 
     useEffect(function () {
@@ -20,17 +21,19 @@ const Report3 = function () {
     return (
         <div className="App container">
             <h1>Flight Report3</h1>
-            <table className="table" >
+            <table className="table table-bordered" >
                 <thead>
-                    <th>Carrier</th>
-                    <th>AircraftType</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                    <th>Sun</th>
+                    <tr>
+                        <th>Carrier</th>
+                        <th>AircraftType</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thu</th>
+                        <th>Fri</th>
+                        <th>Sat</th>
+                        <th>Sun</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {flights.map((e) => {
@@ -53,13 +56,13 @@ const Report3 = function () {
                             <tr key={rawData.id}>
                                 <td>{rawData.Carrier}</td>
                                 <td>{rawData.AircraftType}</td>
-                                <td>{rawData.d1}</td>
-                                <td>{rawData.d2}</td>
-                                <td>{rawData.d3}</td>
-                                <td>{rawData.d4}</td>
-                                <td>{rawData.d5}</td>
-                                <td>{rawData.d6}</td>
-                                <td>{rawData.d7}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d1)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d2)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d3)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d4)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d5)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d6)}</td>
+                                <td>{Allfunction.checkParseToEmpty(rawData.d7)}</td>
                             </tr>
                         );
                     })}

@@ -1,9 +1,10 @@
 import "../App.css";
 import { useEffect, useState } from "react";
 import Axios from "axios";
+import Allfunction from "../functions/function"
 
 const Report4 = function () {
-    const server = "https://heroku-wasun-flights.herokuapp.com";
+    const server = window.$servername;
     const [flights, setflights] = useState([]);
 
     useEffect(function () {
@@ -36,34 +37,36 @@ const Report4 = function () {
     return (
         <div className="App container">
             <h1>Flight Report4</h1>
-            <table className="table" >
+            <table className="table table-striped table-hover" >
                 <thead>
-                    <th>WeekDay</th>
-                    <th>Carrier</th>
-                    <th>00</th>
-                    <th>01</th>
-                    <th>02</th>
-                    <th>03</th>
-                    <th>04</th>
-                    <th>05</th>
-                    <th>06</th>
-                    <th>07</th>
-                    <th>08</th>
-                    <th>09</th>
-                    <th>10</th>
-                    <th>11</th>
-                    <th>12</th>
-                    <th>13</th>
-                    <th>14</th>
-                    <th>15</th>
-                    <th>16</th>
-                    <th>17</th>
-                    <th>18</th>
-                    <th>19</th>
-                    <th>20</th>
-                    <th>21</th>
-                    <th>22</th>
-                    <th>23</th>
+                    <tr>
+                        <th className="Border-th">WeekDay</th>
+                        <th className="Border-th">Carrier</th>
+                        <th className="Border-th">00</th>
+                        <th className="Border-th">01</th>
+                        <th className="Border-th">02</th>
+                        <th className="Border-th">03</th>
+                        <th className="Border-th">04</th>
+                        <th className="Border-th">05</th>
+                        <th className="Border-th">06</th>
+                        <th className="Border-th">07</th>
+                        <th className="Border-th">08</th>
+                        <th className="Border-th">09</th>
+                        <th className="Border-th">10</th>
+                        <th className="Border-th">11</th>
+                        <th className="Border-th">12</th>
+                        <th className="Border-th">13</th>
+                        <th className="Border-th">14</th>
+                        <th className="Border-th">15</th>
+                        <th className="Border-th">16</th>
+                        <th className="Border-th">17</th>
+                        <th className="Border-th">18</th>
+                        <th className="Border-th">19</th>
+                        <th className="Border-th">20</th>
+                        <th className="Border-th">21</th>
+                        <th className="Border-th">22</th>
+                        <th className="Border-th">23</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {flights.map((e, index) => {
@@ -101,32 +104,32 @@ const Report4 = function () {
                         })
                         return (
                             <tr key={rawData.id}>
-                                <td>{rawData.Day}</td>
-                                <td>{rawData.Carrier}</td>
-                                <td>{rawData.d0}</td>
-                                <td>{rawData.d1}</td>
-                                <td>{rawData.d2}</td>
-                                <td>{rawData.d3}</td>
-                                <td>{rawData.d4}</td>
-                                <td>{rawData.d5}</td>
-                                <td>{rawData.d6}</td>
-                                <td>{rawData.d7}</td>
-                                <td>{rawData.d8}</td>
-                                <td>{rawData.d9}</td>
-                                <td>{rawData.d10}</td>
-                                <td>{rawData.d11}</td>
-                                <td>{rawData.d12}</td>
-                                <td>{rawData.d13}</td>
-                                <td>{rawData.d14}</td>
-                                <td>{rawData.d15}</td>
-                                <td>{rawData.d16}</td>
-                                <td>{rawData.d17}</td>
-                                <td>{rawData.d18}</td>
-                                <td>{rawData.d19}</td>
-                                <td>{rawData.d20}</td>
-                                <td>{rawData.d21}</td>
-                                <td>{rawData.d22}</td>
-                                <td>{rawData.d23}</td>
+                                <td className="Border-td">{rawData.Day}</td>
+                                <td className="Border-td">{rawData.Carrier}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d0)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d1)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d2)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d3)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d4)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d5)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d6)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d7)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d8)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d9)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d10)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d11)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d12)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d13)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d14)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d15)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d16)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d17)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d18)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d19)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d20)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d21)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d22)}</td>
+                                <td className="Border-td">{Allfunction.checkParseToEmpty(rawData.d23)}</td>
                             </tr>
                         );
                     })}

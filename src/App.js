@@ -9,7 +9,8 @@ import Report4 from './component/Report4';
 import Navbar from './component/Navbar';
 import { Link, Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 
-const server = "https://heroku-wasun-flights.herokuapp.com";
+// const server = "https://heroku-wasun-flights.herokuapp.com";
+const server = "http://localhost:3001";
 
 function App() {
   return (
