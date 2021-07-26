@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-window.$servername = "https://heroku-wasun-flights.herokuapp.com";
-window.$localservername = "http://localhost:3001";
+//window.$servername = "https://heroku-wasun-flights.herokuapp.com";
+window.$servername = "http://localhost:3001";
 
 export default {
     checkParseToEmpty: function (request) {

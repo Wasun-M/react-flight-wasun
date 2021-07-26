@@ -38,6 +38,10 @@
   border-color: black;
 }
 
+.main-view{
+  display: grid !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

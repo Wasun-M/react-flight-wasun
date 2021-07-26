@@ -116,46 +116,48 @@ const Flights = function () {
                             }}></input>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row" style={{ "padding-bottom": "10px" }}>
                     <div className="col-4"></div>
                     <div className="col-4" style={{ paddingTop: "10px" }}><button type="button" onClick={() => { searchFlughts() }} className="btn btn-success" >ค้นหา</button></div>
                     <div className="col-4"></div>
                 </div>
-            </div>
-            <table className="table table-bordered" >
-                <thead>
-                    <tr>
-                        <th>FlightType</th>
-                        <th>ScheduleDate</th>
-                        <th>Carrier</th>
-                        <th>FlightNo</th>
-                        <th>AircraftType</th>
-                        <th>Reg</th>
-                        <th>Gate</th>
-                        <th>Pos</th>
-                        <th>Belt</th>
-                        <th>Remark</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {flights.map((e) => {
-                        return (
-                            <tr key={e.id}>
-                                <td>{e.flight_type}</td>
-                                <td>{formatDate(e.schedule_date)}</td>
-                                <td>{e.carrier}</td>
-                                <td>{e.flight_no}</td>
-                                <td>{e.aircraft_type}</td>
-                                <td>{e.reg}</td>
-                                <td>{e.gate}</td>
-                                <td>{e.pos}</td>
-                                <td>{e.belt}</td>
-                                <td>{e.remark}</td>
+                <div className="row">
+                    <table className="table table-bordered" >
+                        <thead>
+                            <tr>
+                                <th>FlightType</th>
+                                <th>ScheduleDate</th>
+                                <th>Carrier</th>
+                                <th>FlightNo</th>
+                                <th>AircraftType</th>
+                                <th>Reg</th>
+                                <th>Gate</th>
+                                <th>Pos</th>
+                                <th>Belt</th>
+                                <th>Remark</th>
                             </tr>
-                        );
-                    })}
-                </tbody>
-            </table>
+                        </thead>
+                        <tbody>
+                            {flights.map((e) => {
+                                return (
+                                    <tr key={e.id}>
+                                        <td>{e.flight_type}</td>
+                                        <td>{formatDate(e.schedule_date)}</td>
+                                        <td>{e.carrier}</td>
+                                        <td>{e.flight_no}</td>
+                                        <td>{e.aircraft_type}</td>
+                                        <td>{e.reg}</td>
+                                        <td>{e.gate}</td>
+                                        <td>{e.pos}</td>
+                                        <td>{e.belt}</td>
+                                        <td>{e.remark}</td>
+                                    </tr>
+                                );
+                            })}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     );
 }
